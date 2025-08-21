@@ -36,11 +36,25 @@ main {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.project img {
-    max-width: 100%;
-    border-radius: 5px;
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
     margin-bottom: 15px;
 }
+
+.project-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-images img:hover {
+    transform: scale(1.05);
+}
+
 
 .project h2 {
     margin-top: 0;
