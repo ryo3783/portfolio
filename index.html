@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESポートフォリオ</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4a90e2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .project {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .project h2 {
+            margin-top: 0;
+            color: #4a90e2;
+        }
+        .project p {
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>〇〇 太郎の開発ポートフォリオ</h1>
+        <p>SES面接用 / 開発経験・プロジェクト紹介</p>
+    </header>
+    <main>
+        <div class="project">
+            <img src="images/kentei.png" alt="検定予約システム">
+            <h2>検定予約システム</h2>
+            <p><strong>使用技術：</strong>PHP, HTML, CSS, MySQL</p>
+            <p><strong>概要：</strong>複数日程の管理と申込ボタンの自動表示、カレンダー結合処理などを担当。</p>
+            <p><strong>苦労した点：</strong>月末から翌月にまたがる日程処理やiOSフォーム送信対応など、少人数チームで工夫して解決。</p>
+        </div>
+
+        <div class="project">
+            <img src="images/kyoei.png" alt="日報管理システム">
+            <h2>共栄建設 日報管理システム</h2>
+            <p><strong>使用技術：</strong>VB.NET, SQL Server</p>
+            <p><strong>概要：</strong>現場日報の作成・集計機能を開発。少人数チームで機能設計から実装まで担当。</p>
+            <p><strong>苦労した点：</strong>日報の自動集計ロジックや画面表示調整に時間がかかりました。</p>
+        </div>
+
+        <div class="project">
+            <img src="images/nishikousha.png" alt="打刻・日報・アルコールチェックシステム">
+            <h2>西工舎 打刻・日報・アルコールチェック管理システム</h2>
+            <p><strong>使用技術：</strong>PHP, Laravel, HTML, CSS</p>
+            <p><strong>概要：</strong>勤怠打刻、日報、アルコールチェック機能を統合した管理システムを開発。</p>
+            <p><strong>苦労した点：</strong>複雑な権限管理やレポート出力の仕様に対応するため、設計を工夫しました。</p>
+        </div>
+    </main>
+    <footer>
+        © 2025 SESポートフォリオ
+    </footer>
+</body>
+</html>
