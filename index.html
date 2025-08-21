@@ -13,31 +13,73 @@
     </header>
     <main>
         <div class="project">
-            <img src="img/kentei.png" alt="検定予約システム">
+    <div class="project-images">
+        <img src="img/kentei.png" alt="検定予約システム">
+        <img src="img/kentei2.png" alt="検定予約システム2">
+    </div>
+            <div class="project-info">
             <h2>検定予約システム</h2>
             <p><strong>使用技術：</strong>PHP, HTML, CSS, MySQL</p>
             <p><strong>概要：</strong>複数日程の管理と申込ボタンの自動表示、カレンダー結合処理などを担当。</p>
             <p><strong>苦労した点：</strong>月末から翌月にまたがる日程処理やiOSフォーム送信対応など、少人数チームで工夫して解決。</p>
         </div>
+        </div>
 
         <div class="project">
-            <img src="img/kyoei.png" alt="日報管理システム">
-            <h2>共栄建設 日報管理システム</h2>
+            <div class="project-images">
+                <img src="img/kyoei.png" alt="日報管理システム">
+            </div>
+            <div class="project-info">
+                <h2>共栄建設 日報管理システム</h2>
             <p><strong>使用技術：</strong>VB.NET, SQL Server</p>
             <p><strong>概要：</strong>現場日報の作成・集計機能を開発。少人数チームで機能設計から実装まで担当。</p>
             <p><strong>苦労した点：</strong>日報の自動集計ロジックや画面表示調整に時間がかかりました。</p>
         </div>
+        </div>
 
         <div class="project">
-            <img src="img/nishikousha.png" alt="打刻・日報・アルコールチェックシステム">
-            <h2>西工舎 打刻・日報・アルコールチェック管理システム</h2>
+             <div class="project-images">
+                 <img src="img/nishikousha.png" alt="打刻・日報・アルコールチェックシステム">
+              </div>
+            <div class="project-info">
+                <h2>西工舎 打刻・日報・アルコールチェック管理システム</h2>
             <p><strong>使用技術：</strong>PHP, Laravel, HTML, CSS</p>
             <p><strong>概要：</strong>勤怠打刻、日報、アルコールチェック機能を統合した管理システムを開発。</p>
             <p><strong>苦労した点：</strong>複雑な権限管理やレポート出力の仕様に対応するため、設計を工夫しました。</p>
+        </div>
         </div>
     </main>
     <footer>
         © 2025 SESポートフォリオ
     </footer>
+    <script>
+document.querySelectorAll('.project-images img').forEach(img => {
+    img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.background = 'rgba(0,0,0,0.8)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = 1000;
+
+        const imgLarge = document.createElement('img');
+        imgLarge.src = img.src;
+        imgLarge.style.maxWidth = '90%';
+        imgLarge.style.maxHeight = '90%';
+        imgLarge.style.borderRadius = '10px';
+        overlay.appendChild(imgLarge);
+
+        overlay.addEventListener('click', () => overlay.remove());
+
+        document.body.appendChild(overlay);
+    });
+});
+</script>
+
 </body>
 </html>
