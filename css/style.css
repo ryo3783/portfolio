@@ -37,15 +37,16 @@ main {
 }
 
 .project-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    display: flex;             /* GridではなくFlexで横並び */
+    flex-wrap: wrap;           /* 複数画像なら改行 */
     gap: 10px;
     margin-bottom: 15px;
+    justify-content: flex-start; /* 左寄せ */
 }
 
 .project-images img {
-    width: 100%;
-    height: auto;
+    width: 150px;               /* 横幅固定 */
+    height: auto;               /* 高さは自動で比率維持 */
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s;
@@ -54,6 +55,7 @@ main {
 .project-images img:hover {
     transform: scale(1.05);
 }
+
 
 
 .project h2 {
